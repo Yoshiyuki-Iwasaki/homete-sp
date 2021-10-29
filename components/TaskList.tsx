@@ -13,9 +13,17 @@ const TaskList = () => {
     <View style={styles.container}>
       <View style={styles.tasksWrapper}>
         <Text style={styles.sectionTitle}>Task List</Text>
-        <View>
+        <View style={styles.items}>
           {taskItems.map((item: any, index: string) => {
-            return <TaskItem key={index} item={item} index={index} />;
+            return (
+              <TaskItem
+                key={index}
+                index={index}
+                item={item}
+                taskItems={taskItems}
+                setTaskItems={setTaskItems}
+              />
+            );
           })}
         </View>
       </View>
@@ -29,22 +37,17 @@ export default TaskList;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor:'#E8EAED',
+    backgroundColor: "#E8EAED",
   },
   tasksWrapper: {
     paddingTop: 80,
-    paddingHorizontal:20,
+    paddingHorizontal: 20,
   },
   sectionTitle: {
     fontSize: 24,
-    fontWeight: 'bold',
+    fontWeight: "bold",
   },
   items: {
-    marginTop:30,
+    marginTop: 30,
   },
-  writeTaskWrapper: {
-  },
-  input: {},
-  addWrapper: {},
-  addText: {},
 });
