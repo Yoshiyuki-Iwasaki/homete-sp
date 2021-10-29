@@ -24,7 +24,7 @@ export default TaskItem;
 
 const styles = StyleSheet.create({
   item: {
-    marginBottom: 20,
+    marginBottom: 10,
     padding: 15,
     backgroundColor: "#fff",
     borderRadius: 10,

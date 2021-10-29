@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
   writeTaskWrapper: {
     position: "absolute",
     paddingHorizontal: 10,
-    bottom: 60,
+    bottom: 40,
     width: "100%",
     flexDirection: "row",
     justifyContent: "space-between",
