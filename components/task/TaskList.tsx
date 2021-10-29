@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import {
-  Text,
   View,
   StyleSheet
 } from "react-native";
@@ -12,13 +11,12 @@ const TaskList = () => {
   return (
     <View style={styles.container}>
       <View style={styles.tasksWrapper}>
-        <Text style={styles.sectionTitle}>Task List</Text>
         <View style={styles.items}>
           {taskItems.map((item: any, index: string) => {
             return (
               <TaskItem
                 key={index}
-                index={index}
+                index={index}s
                 item={item}
                 taskItems={taskItems}
                 setTaskItems={setTaskItems}
@@ -40,7 +38,9 @@ const styles = StyleSheet.create({
     backgroundColor: "#E8EAED",
   },
   tasksWrapper: {
-    paddingTop: 80,
+    height: '67vh',
+    overflow: 'scroll',
+    paddingTop: 20,
     paddingHorizontal: 20,
   },
   sectionTitle: {
@@ -48,6 +48,5 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
   },
   items: {
-    marginTop: 30,
   },
 });
