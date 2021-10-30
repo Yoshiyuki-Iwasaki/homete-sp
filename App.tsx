@@ -7,7 +7,6 @@ import Ionicons from "react-native-vector-icons/Ionicons";
 
 const Tab = createBottomTabNavigator();
 
-
 const App = () => {
   return (
     <>
@@ -19,10 +18,10 @@ const App = () => {
 
               if (route.name === "Home") {
                 iconName = focused
-                  ? "ios-information-circle"
-                  : "ios-information-circle-outline";
-              } else if (route.name === "Settings") {
-                iconName = focused ? "ios-list-box" : "ios-list";
+                  ? "home"
+                  : "home-outline";
+              } else if (route.name === "Account") {
+                iconName = focused ? "man" : "man-outline";
               }
 
               // You can return any component that you like here!
@@ -33,7 +32,7 @@ const App = () => {
           })}
         >
           <Tab.Screen name="Home" component={Top} />
-          <Tab.Screen name="Settings" component={Account} />
+          <Tab.Screen name="Account" component={Account} />
         </Tab.Navigator>
       </NavigationContainer>
     </>
