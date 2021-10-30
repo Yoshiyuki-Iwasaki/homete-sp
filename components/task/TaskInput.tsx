@@ -12,7 +12,7 @@ import {
 const TaskInput = ({ taskItems, setTaskItems }:any) => {
   const [task, setTask] = useState<string>("");
   const handleAddTask = () => {
-    if (!task) null;
+    if (!task) return;
     setTaskItems([...taskItems, task]);
     setTask("");
   };
