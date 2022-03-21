@@ -9,7 +9,7 @@ import {
   StyleSheet,
 } from "react-native";
 
-const TaskInput = ({ taskItems, setTaskItems }:any) => {
+const Input = ({ taskItems, setTaskItems }: any) => {
   const [task, setTask] = useState<string>("");
   const handleAddTask = () => {
     if (!task) return;
@@ -36,8 +36,7 @@ const TaskInput = ({ taskItems, setTaskItems }:any) => {
   );
 };
 
-export default TaskInput;
-
+export default Input;
 
 const styles = StyleSheet.create({
   writeTaskWrapper: {
@@ -50,7 +49,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   input: {
-    marginRight:5,
+    marginRight: 5,
     paddingVertical: 15,
     paddingHorizontal: 15,
     backgroundColor: "#fff",

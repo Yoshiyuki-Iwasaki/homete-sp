@@ -1,10 +1,8 @@
-import React from "react";
-import TaskList from "../components/task/TaskList";
+import React, { FC } from "react";
+import TaskList from "../components/organisms/TaskList";
 
-const Top = () => {
-  return (
-    <TaskList />
-  );
+const Top: FC = () => {
+  return <TaskList />;
 };
 
 export default Top;

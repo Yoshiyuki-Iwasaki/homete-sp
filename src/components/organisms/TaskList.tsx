@@ -1,10 +1,7 @@
 import React, { useState } from "react";
-import {
-  View,
-  StyleSheet
-} from "react-native";
-import TaskItem from "./TaskItem";
-import TaskInput from "./TaskInput";
+import { View, StyleSheet } from "react-native";
+import TaskItem from "../molecules/TaskItem";
+import TaskInput from "../atoms/Input";
 
 const TaskList = () => {
   const [taskItems, setTaskItems] = useState<any>([]);
@@ -16,7 +13,8 @@ const TaskList = () => {
             return (
               <TaskItem
                 key={index}
-                index={index}s
+                index={index}
+                s
                 item={item}
                 taskItems={taskItems}
                 setTaskItems={setTaskItems}
@@ -38,8 +36,8 @@ const styles = StyleSheet.create({
     backgroundColor: "#E8EAED",
   },
   tasksWrapper: {
-    height: '67vh',
-    overflow: 'scroll',
+    height: "67vh",
+    overflow: "scroll",
     paddingTop: 20,
     paddingHorizontal: 20,
   },
@@ -47,6 +45,5 @@ const styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: "bold",
   },
-  items: {
-  },
+  items: {},
 });

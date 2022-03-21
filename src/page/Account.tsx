@@ -1,10 +1,16 @@
-import React, { useState } from "react";
-import { Text, View, Image, TouchableOpacity, StyleSheet, Dimensions } from "react-native";
-import { color } from "react-native-reanimated";
+import React, { FC, useState } from "react";
+import {
+  Text,
+  View,
+  Image,
+  TouchableOpacity,
+  StyleSheet,
+  Dimensions,
+} from "react-native";
 
 const listTab = [{ status: "投稿" }, { status: "いいね" }];
 
-const Account = () => {
+const Account: FC = () => {
   const [status, setStatus] = useState("投稿");
   const setStatusFilter = (status: any) => {
     setStatus(status);
@@ -45,7 +51,6 @@ const Account = () => {
 };
 
 export default Account;
-
 
 const styles = StyleSheet.create({
   upperBg: {

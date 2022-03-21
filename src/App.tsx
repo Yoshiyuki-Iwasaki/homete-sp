@@ -1,34 +1,16 @@
-import React from "react";
+import React, { FC } from "react";
 import Top from "./page/Top";
 import Account from "./page/Account";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import Ionicons from "react-native-vector-icons/Ionicons";
 
 const Tab = createBottomTabNavigator();
 
-const App = () => {
+const App: FC = () => {
   return (
     <>
       <NavigationContainer>
-        <Tab.Navigator
-          screenOptions={({ route }: any) => ({
-            tabBarIcon: ({ focused, color, size }: any) => {
-              let iconName;
-
-              if (route.name === "Home") {
-                iconName = focused ? "home" : "home-outline";
-              } else if (route.name === "Account") {
-                iconName = focused ? "man" : "man-outline";
-              }
-
-              // You can return any component that you like here!
-              return <Ionicons name={iconName} size={size} color={color} />;
-            },
-            tabBarActiveTintColor: "tomato",
-            tabBarInactiveTintColor: "gray",
-          })}
-        >
+        <Tab.Navigator>
           <Tab.Screen name="Home" component={Top} />
           <Tab.Screen name="Account" component={Account} />
         </Tab.Navigator>
